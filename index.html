@@ -5,11 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Portfolio</title>
         <link rel="stylesheet" href="style.css">
-    </head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<script src="jquery.min.js"></script>
+</head>
     <body>
-        <div class="header">Header</div>
+        <div class="header"><h1>Cora Lawrence : Game Developer</h1></div>
         <div>
-        <div class="card">
+        <div class="card" data-link="https://ladyathena02.itch.io/general-whiskers-armored-avenger">
+            <div class="titlecard">
+            <div class="title">General Whiskers</div>
+            <div class="subtitle">Armored Avenger</div>
+            <div class="tagline">Game Engines F24 Final</div>    
+            </div>
+            <div class="icon"><img src="./images/Screenshot 2024-12-07 184506.png" alt=""></div>
             <div class="wrapper">
                 <div class="item" style="--n:1"><img src="https://img.itch.zone/aW1nLzE5NDcyNTE5LnBuZw==/315x250%23c/GmImn%2F.png"></div>
                 <div class="item" style="--n:2"><img src="https://img.itch.zone/aW1hZ2UvMzI2MTgwOS8xOTQ3MjU0NC5wbmc=/347x500/EPyYui.png" alt=""></div>
@@ -17,7 +28,13 @@
                 <div class="item" style="--n:4"><img src="https://img.itch.zone/aW1hZ2UvMzI2MTgwOS8xOTQ3MjU0Ni5wbmc=/347x500/p3%2FEUI.png" alt=""></div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-link="https://sollytowerstests.itch.io/chic">
+            <div class="titlecard">
+            <div class="title">Chic</div>
+            <div class="subtitle"></div>
+            <div class="tagline">Global Game Jam 2025</div>
+        </div>
+            <div class="icon"><img src="./images/Screenshot 2025-01-25 190921.png" alt=""></div>
             <div class="wrapper">
                 <div class="item" style="--n:1"><img src="https://img.itch.zone/aW1nLzE5NTYxODIxLnBuZw==/original/f43jOF.png" alt=""></div>
                 <div class="item" style="--n:2"><img src="https://img.itch.zone/aW1hZ2UvMzI3NzMxNi8xOTU1ODczMS5wbmc=/347x500/sCTcWy.png" alt=""></div>
@@ -44,4 +61,13 @@
     </div>
         <div class="footer">Footer</div>
     </body>
+    <script>
+       $(document).ready(function() {
+  $("[data-link]").click(function() {
+    var url = $(this).attr("data-link");
+    window.open(url, "_blank"); // Opens in a new tab/window
+    return false;
+  });
+});
+    </script>
 </html>
